@@ -18,4 +18,12 @@ public class LiveDataEventsDto extends BaseLiveDataDto {
         this.matchDetails = matchDetails;
     }
 
+    public List<EventDto> getEvent() {
+        return event;
+    }
+
+    public void setEvent(List<EventDto> event) {
+        this.event = event;
+    }
+
 }
