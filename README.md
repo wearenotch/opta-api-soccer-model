@@ -27,10 +27,11 @@ To use this library in you gradle project simply add the following repository de
         credentials {
             username = System.getenv("GITHUB_PACKAGES_USERID") ?: "dmadunic"
             // Safe to share the password since it is a `read:package` scoped token.
-            password = System.getenv("GITHUB_PACKAGES_IMPORT_TOKEN") ?: "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"
+            password = System.getenv("GITHUB_PACKAGES_IMPORT_TOKEN") ?: "put_read_only_token_here"
         }
     }
 ```
+
 This package is published in github packages gradle repository, yet unfortunatelly due to the lack of public access to the published libraries this hack is needed.
 
 Password is **readonly** personal access token (PAT) to github packages.
@@ -41,7 +42,7 @@ Password is **readonly** personal access token (PAT) to github packages.
 
 ### Setup (First time)
 1. Clone the repository: `git clone git@github.com:ag04/opta-api-soccer-model.git`
-4. Build project with: ` ./gradlew clean build `
+4. Build project with: `./gradlew clean build `
 
 ### Release new version
 Make sure that file gradle.properties in the folder ${USER_HOME}/.gradle/ contains the following two variables defined:

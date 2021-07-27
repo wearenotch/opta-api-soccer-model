@@ -2,12 +2,11 @@ package com.ag04.opta.soccer.sdapi.ma2;
 
 import java.io.Serializable;
 
-import com.ag04.opta.soccer.sdapi.BaseLiveDataDto;
 import com.ag04.opta.soccer.sdapi.match.MatchInfoDto;
 
 public class MA2FeedResponse implements Serializable {
     private MatchInfoDto matchInfo;
-    private BaseLiveDataDto liveData;
+    private LiveDataDto liveData;
 
     public MatchInfoDto getMatchInfo() {
         return matchInfo;
@@ -17,11 +16,11 @@ public class MA2FeedResponse implements Serializable {
         this.matchInfo = matchInfo;
     }
 
-    public BaseLiveDataDto getLiveData() {
+    public LiveDataDto getLiveData() {
         return liveData;
     }
 
-    public void setLiveData(BaseLiveDataDto liveData) {
+    public void setLiveData(LiveDataDto liveData) {
         this.liveData = liveData;
     }
 
