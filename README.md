@@ -1,6 +1,21 @@
 # ag04/opta-api-soccer-model
 
-AG04 Java representation of data model for OPTA soccer API (push and pull) 
+Agency04 Java representation of the data model for OPTA soccer API (push and pull).
+
+### SDAPI
+Model supports the following opta feeds:
+
+* Tournament Calendars (OT2)
+* Fixtures and Results (MA1)
+* Match Stats (MA2)
+* Match Events (MA3)
+* Teams (TM1)
+* Team Standings (TM2)
+* Squads (TM3)
+* Rankings (PE4)
+
+### SDDP
+
 
 ## Usage
 
