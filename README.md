@@ -25,8 +25,9 @@ To use this library in you gradle project simply add the following repository de
     maven {
         url 'https://maven.pkg.github.com/ag04/opta-api-soccer-model'
         credentials {
-            username = "dmadunic"
-            password = "cd1682474e79efb726afe2dd08f902b3da7aa993"
+            username = System.getenv("GITHUB_PACKAGES_USERID") ?: "dmadunic"
+            // Safe to share the password since it is a `read:package` scoped token.
+            password = System.getenv("GITHUB_PACKAGES_IMPORT_TOKEN") ?: "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"
         }
     }
 ```
