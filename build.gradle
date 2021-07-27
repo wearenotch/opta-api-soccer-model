@@ -1,0 +1,50 @@
+plugins {
+	id 'maven-publish'
+    id 'net.researchgate.release' version '2.8.1'
+    id 'java'
+}
+
+apply plugin: 'idea'
+
+group = 'com.ag04.opta'
+sourceCompatibility = '11'
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+    repositories {
+        if (project.hasProperty('github_username') && project.hasProperty('github_password')) {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/ag04/opta-api-soccer-model")
+                credentials {
+                    username github_username
+                    password github_password
+                }
+            }
+        }
+    }
+}
+
+afterReleaseBuild.dependsOn publish
+
+dependencies {
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+}
