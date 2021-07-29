@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class TournamentCalendarDto implements Serializable {
     String id;
     String ocId;
+    String opId;
     String name;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'Z'")
@@ -46,6 +47,14 @@ public class TournamentCalendarDto implements Serializable {
 
     public void setOcId(String ocId) {
         this.ocId = ocId;
+    }
+
+    public String getOpId() {
+        return opId;
+    }
+
+    public void setOpId(String opId) {
+        this.opId = opId;
     }
 
     public String getName() {
@@ -100,6 +109,6 @@ public class TournamentCalendarDto implements Serializable {
     public String toString() {
         return "TournamentCalendarDto [active=" + active + ", endDate=" + endDate + ", id=" + id
                 + ", includesStandings=" + includesStandings + ", includesVenues=" + includesVenues + ", lastUpdated="
-                + lastUpdated + ", name=" + name + ", ocId=" + ocId + ", startDate=" + startDate + "]";
+                + lastUpdated + ", name=" + name + ", ocId=" + ocId + ", opId=" + opId + ", startDate=" + startDate + "]";
     }
 }

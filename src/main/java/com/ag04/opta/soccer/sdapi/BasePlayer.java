@@ -3,6 +3,7 @@ package com.ag04.opta.soccer.sdapi;
 /**
  * Extended by:
  *  - MA2/PlayerDto
+ *  - PE7/PersonDto
  * 
  */
 public class BasePlayer extends BasePerson {
