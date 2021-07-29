@@ -16,6 +16,8 @@ Model supports the following opta feeds:
 
 ### SDDP
 
+* Match Events (MA3)
+
 
 ## Usage
 
