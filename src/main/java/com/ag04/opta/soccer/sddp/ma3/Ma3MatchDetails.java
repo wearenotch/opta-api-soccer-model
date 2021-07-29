@@ -38,7 +38,7 @@ public class Ma3MatchDetails implements Serializable {
     }
 
     public OptaEvent getOneEvent() {
-        return event[0];
+        return event != null && event.length > 0 ? event[0] : null;
     }
     
     public OptaEvent[] getEvents() {

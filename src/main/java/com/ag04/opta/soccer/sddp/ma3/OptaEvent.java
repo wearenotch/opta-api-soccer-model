@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class OptaEvent implements Serializable {
 
     private Long id;
-    private int seqId;
+    private int seqId = 0;
     private int eventId;
     private int typeId;
     private Integer periodId;
@@ -27,13 +27,17 @@ public class OptaEvent implements Serializable {
     private int outcome;
     private double x;
     private double y;
-    private Date timeStamp;
     private String playerId;
     private String playerName;
     private List<OptaQualifier> qualifier;
+    private Date timeStamp;
     private Date lastModified;
 
     //--- util methods -------------------------------------------------------
+
+    public String shortInfo() {
+        return String.format("[%d] (%d:%d) eventId=%d | typeId=%d | team: %s | player: %s / %s", seqId, timeMin, timeSec, eventId, typeId, contestantId, playerId, playerName);
+    }
 
     public OptaQualifier getByQualifierId(int qualifierId) {
         for (OptaQualifier q : qualifier) {
