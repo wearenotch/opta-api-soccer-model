@@ -2,6 +2,7 @@
 
 Agency04 Java representation of the data model for OPTA soccer API (push and pull).
 
+[![GitHub version](https://badge.fury.io/gh/ag04%2Fopta-api-soccer-model.svg)](https://github.com/ag04/opta-api-soccer-model)
 ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&style=flat)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ### SDAPI
