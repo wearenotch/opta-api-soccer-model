@@ -2,6 +2,9 @@
 
 Agency04 Java representation of the data model for OPTA soccer API (push and pull).
 
+![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white&style=flat)
+[![GitHub Release](https://img.shields.io/github/realese/ag04/opta-api-soccer-model.svg)]()
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ### SDAPI
 Model supports the following opta feeds:
 
