@@ -1,5 +1,6 @@
 package com.ag04.opta.soccer.sdapi.match;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import com.ag04.opta.soccer.sdapi.StageDto;
 import com.ag04.opta.soccer.sdapi.TournamentCalendarDto;
 
 
-public class MatchInfoDto {
+public class MatchInfoDto implements Serializable {
     String id;
     
     Integer coverageLevel;
