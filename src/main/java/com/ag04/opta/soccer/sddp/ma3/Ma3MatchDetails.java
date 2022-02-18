@@ -1,5 +1,8 @@
 package com.ag04.opta.soccer.sddp.ma3;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 
 /**
@@ -29,18 +32,22 @@ public class Ma3MatchDetails implements Serializable {
         this.id = id;
     }
 
+    @JsonProperty
     public OptaEvent[] getEvent() {
         return event;
     }
 
+    @JsonProperty
     public void setEvent(OptaEvent[] event) {
         this.event = event;
     }
 
+    @JsonIgnore
     public OptaEvent getOneEvent() {
         return event != null && event.length > 0 ? event[0] : null;
     }
-    
+
+    @JsonIgnore
     public OptaEvent[] getEvents() {
         return event;
     }
